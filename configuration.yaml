@@ -12,10 +12,14 @@ frontend:
 config:
 
 http:
+  api_password: !secret http_api_password
 
 updater:
 
 discovery:
+
+device_tracker:
+  - platform: gpslogger
 
 conversation:
 
@@ -24,6 +28,8 @@ history:
 logbook:
 
 map:
+
+mqtt:
 
 sun:
 
@@ -41,4 +47,4 @@ camera: !include_dir_merge_named cameras
 group: !include_dir_merge_named groups
 script: !include_dir_merge_named scripts
 sensor: !include_dir_merge_named sensors
-zone: !include_dir_merge_named zones
+zone: !include zones.yaml
