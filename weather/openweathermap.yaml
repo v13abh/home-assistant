@@ -1,0 +1,5 @@
+platform: openweathermap
+api_key: !secret openweathermap_api
+latitude: !secret home_latitude
+longitude: !secret home_longitude
+
